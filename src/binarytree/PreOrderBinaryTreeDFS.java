@@ -1,19 +1,25 @@
+package binarytree;
+
 public class PreOrderBinaryTreeDFS {
 	public static void main(String[] args) {
 
-		Node root = new Node(1);
-		root.right = new Node(2);
-		root.left = new Node(3);
-		root.left.right = new Node(4);
-		root.left.left = new Node(5);
+		TreeNode root = new TreeNode(1);
+		root.right = new TreeNode(2);
+		root.left = new TreeNode(3);
+		root.left.right = new TreeNode(4);
+		root.left.left = new TreeNode(5);
 
-
-		// 1 3 5 4 2
+		////////////////
+		//      1     //
+		//   3    2   //
+		//  5 4       //
+		////////////////
 
 		printPreOrderBinaryTree(root);
 	}
 
-	private static void printPreOrderBinaryTree(Node root) {
+	// ROOT -> LEFT -> RIGHT
+	private static void printPreOrderBinaryTree(TreeNode root) {
 		if (root == null) {
 			return;
 		}
